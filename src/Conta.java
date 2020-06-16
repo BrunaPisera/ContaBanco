@@ -52,21 +52,21 @@ public class Conta {
     }
 
     public void abrirConta(String tipo){
-        setTipo(tipo);
-        setStatus(true);
+        this.tipo = tipo;
+        this.status = false;
         if(tipo == "cc"){
-            setSaldo(50);
+            this.saldo = 50;
         }else if(tipo == "cp"){
-            setSaldo(150);
+            this.saldo = 150;
         }else{
             System.out.println("Tipo de conta inválida!");
         }
     }
     public void fecharConta(){
-        if(getSaldo() > 0){
+        if(this.saldo > 0){
             System.out.println("Conta com dinheiro");
         }
-        else if(getSaldo() < 0){
+        else if(this.saldo < 0){
             System.out.println("Conta em debito");
         }
         else{
@@ -74,7 +74,7 @@ public class Conta {
         }
     }
     public void depositar (float valor){
-        if(getIsStatus() == true){
+        if(this.status == true){
             this.saldo =  this.saldo + valor;
         }else{
             System.out.println("Impossivel depositar");
@@ -82,7 +82,7 @@ public class Conta {
 
     }
     public void sacar(float valor){
-        if(getIsStatus() == true && getSaldo() > valor){
+        if(this.status == true && this.saldo > valor){
             this.saldo = this.saldo - valor;
         }else{
             System.out.println("Impossivel sacar! Verifique o saldo da conta ou sua ativação");
@@ -90,13 +90,13 @@ public class Conta {
     }
     public void pagarMensal(){
         int v;
-        if(getTipo() == "cc"){
+        if(this.tipo == "cc"){
             v = 12;
         }else{
             v = 20;
         }
-        if(getIsStatus() == true){
-            if(getSaldo() > v){
+        if(this.status == true){
+            if(this.saldo > v){
                 this.saldo = this.saldo - v;
             }else{
                 System.out.println("Não ha saldo disponivel!");
@@ -114,5 +114,4 @@ public class Conta {
             builder.append("\n********************************");
             return builder.toString();
         }
-
 }

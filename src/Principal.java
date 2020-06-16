@@ -14,7 +14,7 @@ public class Principal {
         cliente1.depositar(500);
         cliente2.depositar(300);
 
-        cliente1.sacar(100);
+        cliente1.sacar(700);
 
         System.out.println(cliente1.feedBack());
         System.out.println(cliente2.feedBack());
