@@ -105,4 +105,14 @@ public class Conta {
             System.out.println("Sua conta esta desativada!");
         }
     }
+        public String feedBack(){
+            StringBuilder builder = new StringBuilder();
+            builder.append("\nO nome do dono é" + " " + this.dono);
+            builder.append("\nSeu saldo é" + " " + this.saldo);
+            builder.append("\nO numero da conta é" + " " + this.numConta);
+            builder.append("\nO tipo da conta é" + " " + this.tipo);
+            builder.append("\n********************************");
+            return builder.toString();
+        }
+
 }

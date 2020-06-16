@@ -16,14 +16,9 @@ public class Principal {
 
         cliente1.sacar(100);
 
-        System.out.println("O nome do dono é" + " " + cliente1.getDono());
-        System.out.println("O numero da conta é" + " " + cliente1.getNumConta());
-        System.out.println("Seu saldo é" + " " + cliente1.getSaldo());
-        System.out.println("O tipo da conta é" + " " + cliente1.getTipo());
-        System.out.println("O nome do dono é" + " " + cliente2.getDono());
-        System.out.println("O numero da conta é" + " " + cliente2.getNumConta());
-        System.out.println("Seu saldo é" + " " + cliente2.getSaldo());
-        System.out.println("O tipo da conta é" + " " + cliente2.getTipo());
+        System.out.println(cliente1.feedBack());
+        System.out.println(cliente2.feedBack());
+
     }
 
 }
